@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Consciência Negra em Parnaíba — Convite</title>
+<title>Euclides de Miranda - Convite</title>
 <link rel="stylesheet" href="style.css">
   <style>
 :root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
@@ -42,8 +42,8 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:0 18px 28px
 <body>
 <div class="stripe"></div>
 <header class="hero">
-  <small id="escola">Sua Escola · Parnaíba, PI</small>
-  <h1>Consciência Negra em Parnaíba</h1>
+  <small id="escola">(Escola) · Parnaíba, PI</small>
+  <h1>Consciência Negra</h1>
   <p id="tema">Memória, resistência e orgulho: um encontro para celebrar a cultura e a história do povo negro no litoral do Piauí.</p>
   <div class="count" id="count"></div>
 </header>
@@ -70,8 +70,6 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:0 18px 28px
   </section>
   <section>
     <div class="btns">
-      <a class="btn" id="zap" href="#">✅ Confirmar presença no WhatsApp</a>
-      <a class="btn alt" id="cal" href="#">📆 Adicionar ao calendário</a>
       <a class="btn alt" id="mapa" href="#">🗺️ Ver no mapa</a>
     </div>
   </section>
@@ -85,7 +83,6 @@ var EVENTO = {
   dataTexto: "Sexta-feira, 20 de novembro de 2026",
   horaTexto: "19h às 22h",
   local: "Nome da Escola, Rua Exemplo, 123, Parnaíba – PI",
-  whatsapp: "5586900000000",
   programacao: [
     ["19h00","Abertura","Boas-vindas e fala da direção"],
     ["19h30","Palestra","Consciência Negra e a história do litoral piauiense"],
@@ -100,10 +97,10 @@ $("hora").textContent=EVENTO.horaTexto;
 $("local").textContent=EVENTO.local;
 $("prog").innerHTML=EVENTO.programacao.map(function(p){
   return "<li><time>"+p[0]+"</time><div><strong>"+p[1]+"</strong><p>"+p[2]+"</p></div></li>"}).join("");
-$("zap").href="https://wa.me/"+EVENTO.whatsapp+"?text="+encodeURIComponent("Olá! Confirmo minha presença no evento da Consciência Negra em Parnaíba.");
+
 $("mapa").href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(EVENTO.local);
-function g(d){return new Date(d).toISOString().replace(/[-:]|\.\d{3}/g,"")}
-$("cal").href="https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent("Consciência Negra em Parnaíba")+"&dates="+g(EVENTO.inicio)+"/"+g(EVENTO.fim)+"&location="+encodeURIComponent(EVENTO.local);
+
+
 function tick(){
   var s=Math.max(0,Math.floor((new Date(EVENTO.inicio)-new Date())/1000));
   var v=[[Math.floor(s/86400),"dias"],[Math.floor(s%86400/3600),"horas"],[Math.floor(s%3600/60),"min"],[s%60,"seg"]];
