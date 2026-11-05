@@ -1,31 +1,379 @@
-:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
---bg:#fffaf0;--surface:#ffffff;--text:#1a1a1a;--muted:#5b5b5b;--green:#1f7a3d;--yellow:#f2b705;--red:#c8102e;--hero:#111;--hero-text:#fff;--border:#e6dfcf}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#141414;--surface:#1e1e1e;--text:#f4f1ea;--muted:#b5b0a5;--border:#333}}
-:root[data-theme="dark"]{color-scheme:dark;--bg:#141414;--surface:#1e1e1e;--text:#f4f1ea;--muted:#b5b0a5;--border:#333}
-html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
-*,*:before,*:after{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.55}
-.stripe{height:8px;background:linear-gradient(90deg,var(--green) 33%,var(--yellow) 33% 66%,var(--red) 66%)}
-.hero{background:var(--hero);color:var(--hero-text);text-align:center;padding:48px 20px 40px}
-.hero small{letter-spacing:.2em;text-transform:uppercase;color:var(--yellow);font-weight:700}
-.hero h1{font-size:clamp(2rem,9vw,3.4rem);line-height:1.05;margin:12px 0}
-.hero p{max-width:34rem;margin:0 auto 20px;opacity:.9}
-.count{display:flex;gap:10px;justify-content:center;margin-top:22px}
-.count div{background:rgba(255,255,255,.1);border-radius:12px;padding:10px 12px;min-width:64px}
-.count b{display:block;font-size:1.6rem;color:var(--yellow)}
-.count span{font-size:.72rem;text-transform:uppercase;opacity:.8}
-main{max-width:40rem;margin:0 auto;padding:8px 18px 40px}
-section{margin:32px 0}
-h2{font-size:1.5rem;margin:0 0 12px;border-left:6px solid var(--red);padding-left:10px}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px}
-.video{aspect-ratio:16/9;background:var(--hero);color:var(--hero-text);border-radius:14px;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;font-size:.95rem}
-.info{display:grid;gap:10px}
-.info .card b{display:block;color:var(--green)}
-ul.prog{list-style:none;padding:0;margin:0;display:grid;gap:10px}
-ul.prog li{display:flex;gap:12px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px}
-ul.prog time{font-weight:800;color:var(--red);min-width:3.4rem}
-ul.prog p{margin:0;color:var(--muted);font-size:.9rem}
-.btns{display:grid;gap:10px}
-.btn{display:block;text-align:center;padding:14px;border-radius:12px;font-weight:700;text-decoration:none;color:#fff;background:var(--green)}
-.btn.alt{background:transparent;color:var(--text);border:2px solid var(--border)}
-footer{text-align:center;color:var(--muted);font-size:.85rem;padding:0 18px 28px}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&display=swap');
+:root {
+    box-sizing: border-box;
+
+    --bg: #fffaf0;
+    --surface: #ffffff;
+    --text: #1a1a1a;
+    --muted: #5b5b5b;
+    --green: #1f7a3d;
+    --yellow: #f2b705;
+    --red: #c8102e;
+    --hero: #111;
+    --hero-text: #fff;
+    --border: #e6dfcf;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: env(safe-area-inset-top, 0px);
+}
+
+body {
+    margin: 0;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+
+    background: var(--bg);
+    color: var(--text);
+
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.55;
+}
+
+/* =========================
+   TELA DE ABERTURA
+========================= */
+
+#tela-abertura {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 24px;
+
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    color: white;
+    text-align: center;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease;
+}
+
+/* Agrupamento dos elementos */
+
+.conteudo-abertura {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: 380px;
+
+    gap: 12px;
+}
+
+/* Logo */
+
+.logo2 {
+    display: block;
+
+    width: min(200px, 65vw);
+    height: auto;
+
+    object-fit: contain;
+
+    margin: 0 0 8px;
+}
+
+/* Título */
+
+#tela-abertura h1 {
+    font-size: clamp(2.2rem, 8vw, 2.8rem);
+
+    line-height: 1.1;
+    letter-spacing: 3px;
+
+    margin: 0;
+}
+
+/* Frase */
+
+#tela-abertura p {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(25px, 6vw, 36px);
+    font-weight: 800;
+    font-style: italic;
+    line-height: 1.2;
+
+    color: #D7AD68;
+
+    letter-spacing: -1px;
+    margin: 8px 0 20px;
+
+    text-shadow: 0 2px 15px rgba(215, 173, 104, 0.2);
+}
+/* Botão */
+
+#tela-abertura button {
+    padding: 15px 35px;
+
+    border: 1px solid white;
+    border-radius: 6px;
+
+    background: transparent;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+#tela-abertura button:hover {
+    background: white;
+    color: black;
+    transform: scale(1.04);
+}
+
+/* Desaparecimento da abertura */
+
+#tela-abertura.esconder {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* =========================
+   DESFOQUE DO CONVITE
+========================= */
+
+#convite {
+    filter: blur(8px);
+
+    transition: filter 1s ease;
+}
+
+#convite.visivel {
+    filter: blur(0);
+}
+
+/* =========================
+   CONVITE ORIGINAL
+========================= */
+
+.stripe {
+    height: 8px;
+
+    background: linear-gradient(
+        90deg,
+        var(--green) 33%,
+        var(--yellow) 33% 66%,
+        var(--red) 66%
+    );
+}
+
+.hero {
+    background: var(--hero);
+    color: var(--hero-text);
+
+    text-align: center;
+
+    padding: 48px 20px 40px;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.count {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+
+    margin-top: 22px;
+}
+
+.count div {
+    background: rgba(255,255,255,.1);
+    border-radius: 12px;
+
+    padding: 10px 12px;
+    min-width: 64px;
+}
+
+.count b {
+    display: block;
+
+    font-size: 1.6rem;
+    color: var(--yellow);
+}
+
+.count span {
+    font-size: .72rem;
+    text-transform: uppercase;
+    opacity: .8;
+}
+
+/* Conteúdo */
+
+main {
+    max-width: 40rem;
+    margin: 0 auto;
+
+    padding: 8px 18px 40px;
+}
+
+section {
+    margin: 32px 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+
+    margin: 0 0 12px;
+
+    border-left: 6px solid var(--red);
+    padding-left: 10px;
+}
+
+.card {
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    padding: 16px;
+}
+
+.video {
+    aspect-ratio: 16/9;
+
+    background: var(--hero);
+    color: var(--hero-text);
+
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 16px;
+
+    font-size: .95rem;
+}
+
+.info {
+    display: grid;
+    gap: 10px;
+}
+
+.info .card b {
+    display: block;
+    color: var(--green);
+}
+
+ul.prog {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+    gap: 10px;
+}
+
+ul.prog li {
+    display: flex;
+    gap: 12px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    padding: 12px;
+}
+
+ul.prog time {
+    font-weight: 800;
+    color: var(--red);
+
+    min-width: 3.4rem;
+}
+
+ul.prog p {
+    margin: 0;
+
+    color: var(--muted);
+    font-size: .9rem;
+}
+
+.btns {
+    display: grid;
+    gap: 10px;
+}
+
+.btn {
+    display: block;
+
+    text-align: center;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    font-weight: 700;
+    text-decoration: none;
+
+    color: #fff;
+    background: var(--green);
+}
+
+.btn.alt {
+    background: transparent;
+    color: var(--text);
+
+    border: 2px solid var(--border);
+}
+
+footer {
+    text-align: center;
+
+    color: var(--muted);
+    font-size: .85rem;
+
+    padding: 0 18px 28px;
+}
+
+/* Celulares pequenos */
+
+@media (max-width: 380px) {
+    .logo2 {
+        width: 160px;
+    }
+
+    .conteudo-abertura {
+        gap: 9px;
+    }
+
+    #tela-abertura h1 {
+        font-size: 34px;
+    }
+
+    #tela-abertura p {
+        font-size: 16px;
+    }
+}
