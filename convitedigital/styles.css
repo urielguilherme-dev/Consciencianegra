@@ -71,10 +71,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    border: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(18px);
     width: 100%;
     max-width: 380px;
-
+    
     gap: 12px;
 }
 
@@ -111,23 +115,23 @@ body {
     font-style: italic;
     line-height: 1.2;
 
-    color: #D7AD68;
+    color: #a30505;
 
     letter-spacing: -1px;
     margin: 8px 0 20px;
 
-    text-shadow: 0 2px 15px rgba(215, 173, 104, 0.2);
+    text-shadow: 0 2px 15px rgba(56, 2, 2, 0.2);
 }
 /* Botão */
 
 #tela-abertura button {
     padding: 15px 35px;
 
-    border: 1px solid white;
+    border: 1px solid rgb(31, 122, 61);
     border-radius: 6px;
 
-    background: transparent;
-    color: white;
+    background:rgb(31, 122, 61);
+    color: rgb(0, 0, 0);
 
     font-size: 14px;
     font-weight: 700;
@@ -139,8 +143,9 @@ body {
 }
 
 #tela-abertura button:hover {
-    background: white;
-    color: black;
+    background: transparent;
+    color:rgb(255, 255, 255);
+
     transform: scale(1.04);
 }
 
@@ -258,6 +263,7 @@ h2 {
 }
 
 .video {
+    
     aspect-ratio: 16/9;
 
     background: var(--hero);
