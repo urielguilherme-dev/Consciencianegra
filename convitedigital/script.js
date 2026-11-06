@@ -50,7 +50,7 @@ $("prog").innerHTML = EVENTO.programacao.map(function(p) {
 // Google Maps
 
 $("mapa").href =
-    "https://share.google/OKkU3qGvRDngkJmog" +
+    "https://www.google.com/maps/search/?api=1&query=CETI%20Euclides%20de%20Miranda" +
     encodeURIComponent(EVENTO.local);
 
 // ====== CONTAGEM REGRESSIVA ======
