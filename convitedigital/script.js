@@ -8,14 +8,15 @@ var EVENTO = {
     dataTexto: "Quinta-feira, 19 de novembro de 2026",
     horaTexto: "A partir das 18h",
 
-    local: "Euclides de Miranda, Rua José Bonifácio, nº 992, Bairro São Francisco ",
+    local: "CETI Euclides de Miranda, Rua José Bonifácio,
+nº 992, Bairro São Francisco ",
 
     programacao: [
-        ["18h00", "Abertura", "Boas-vindas e fala da direção"],
-        ["19h30", "Palestra", "Consciência Negra e a história do litoral piauiense"],
-        ["20h30", "Apresentações culturais", "Dança, música e poesia dos estudantes"],
-        ["21h30", "Encerramento", "Roda de conversa e confraternização"]
-    ]
+        ["18:30", "Palestra", " Consciência Negra - Ancestralidade, resistência e legado"],
+        ["19:00", "Apresentação culturais", "Vídeos, Danças, Teatro, Roda de Capoeira e Desfile"],
+        ["20h30", "Encerramento", "Confraternização"]
+        
+    ] 
 };
 
 // ====== ELEMENTOS HTML ======
