@@ -50,7 +50,7 @@ $("prog").innerHTML = EVENTO.programacao.map(function(p) {
 // Google Maps
 
 $("mapa").href =
-    "https://maps.app.goo.gl/pEQfFXXcHrjhEP266" +
+    "https://maps.app.goo.gl/eGkaasq4tXdSLne26" +
     encodeURIComponent(EVENTO.local);
 
 // ====== CONTAGEM REGRESSIVA ======
