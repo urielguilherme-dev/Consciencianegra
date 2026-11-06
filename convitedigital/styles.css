@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
 :root {
     box-sizing: border-box;
 
@@ -109,7 +109,7 @@ body {
 /* Frase */
 
 #tela-abertura p {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Anton',sans-serif;
     font-size: clamp(25px, 6vw, 36px);
     font-weight: 800;
     font-style: italic;
@@ -133,6 +133,7 @@ body {
     background:rgb(31, 122, 61);
     color: rgb(0, 0, 0);
 
+    font-family:'Bebas Neue', sans-serif;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 2px;
