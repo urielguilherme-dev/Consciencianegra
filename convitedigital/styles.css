@@ -112,7 +112,6 @@ body {
     font-family: 'Anton',sans-serif;
     font-size: clamp(25px, 6vw, 36px);
     font-weight: 800;
-    font-style: italic;
     line-height: 1.2;
 
     color: #a30505;
