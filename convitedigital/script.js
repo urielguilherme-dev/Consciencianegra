@@ -8,10 +8,9 @@ var EVENTO = {
     dataTexto: "Quinta-feira, 19 de novembro de 2026",
     horaTexto: "A partir das 18h",
 
-    local: "CETI Euclides de Miranda, Rua José Bonifácio,
-nº 992, Bairro São Francisco ",
+    local: "Euclides de Miranda, Rua José Bonifácio, nº 992, Bairro São Francisco ",
 
-    programacao: [
+   programacao: [
         ["18:30", "Palestra", " Consciência Negra - Ancestralidade, resistência e legado"],
         ["19:00", "Apresentação culturais", "Vídeos, Danças, Teatro, Roda de Capoeira e Desfile"],
         ["20h30", "Encerramento", "Confraternização"]
@@ -51,7 +50,7 @@ $("prog").innerHTML = EVENTO.programacao.map(function(p) {
 // Google Maps
 
 $("mapa").href =
-    "https://www.google.com/maps/search/?api=1&query=" +
+    "https://maps.app.goo.gl/pEQfFXXcHrjhEP266" +
     encodeURIComponent(EVENTO.local);
 
 // ====== CONTAGEM REGRESSIVA ======
