@@ -11,6 +11,7 @@ var EVENTO = {
     local: "CETI Euclides de Miranda, Rua José Bonifácio, nº 992, Bairro São Francisco ",
 
    programacao: [
+        ["18:00", "Abertura", "Boas-vindas"],
         ["18:30", "Palestra", " Consciência Negra - Ancestralidade, resistência e legado"],
         ["19:00", "Apresentação culturais", "Vídeos, Danças, Teatro, Roda de Capoeira e Desfile"],
         ["20h30", "Encerramento", "Confraternização"]
