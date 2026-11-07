@@ -114,7 +114,7 @@ tela-abertura p {
     font-weight: 800;
     line-height: 1.2;
 
-    color: var(--red);
+    color: red;
 
     letter-spacing: 1px;
     margin: 8px 0 20px;
@@ -132,7 +132,7 @@ tela-abertura p {
     background:rgb(31, 122, 61);
     color: rgb(0, 0, 0);
 
-    font-family:'Bebas Neue', sans-serif;
+    font-family:'arial', serif;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 2px;
