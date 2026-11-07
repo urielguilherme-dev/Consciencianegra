@@ -108,7 +108,7 @@ body {
 
 /* Frase */
 
-tela-abertura p {
+#tela-abertura p {
     font-family: 'Playfair Display', serif;
     font-size: clamp(25px, 6vw, 36px);
     font-weight: 800;
