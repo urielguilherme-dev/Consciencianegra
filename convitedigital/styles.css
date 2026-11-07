@@ -108,15 +108,15 @@ body {
 
 /* Frase */
 
-#tela-abertura p {
-    font-family: 'Anton',sans-serif;
+tela-abertura p {
+    font-family: 'Playfair Display', serif;
     font-size: clamp(25px, 6vw, 36px);
     font-weight: 800;
     line-height: 1.2;
 
     color: #a30505;
 
-    letter-spacing: -1px;
+    letter-spacing: 1px;
     margin: 8px 0 20px;
 
     text-shadow: 0 2px 15px rgba(56, 2, 2, 0.2);
