@@ -2,8 +2,8 @@
 // ====== CONFIGURAÇÕES DO EVENTO ======
 
 var EVENTO = {
-    inicio: "2026-11-20T19:00:00-03:00",
-    fim: "2026-11-20T22:00:00-03:00",
+    inicio: "2026-11-19T18:00:00-03:00",
+    fim: "2026-11-19T22:00:00-03:00",
 
     dataTexto: "Quinta-feira, 19 de novembro de 2026",
     horaTexto: "A partir das 18h",
